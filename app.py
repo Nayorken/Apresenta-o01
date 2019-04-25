@@ -4,6 +4,7 @@ from models import lojaOnline
 app = Flask(__name__)
 loja = lojaOnline()
 
+#asdfghjklç
 
 @app.route('/')
 def index():
