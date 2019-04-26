@@ -28,7 +28,7 @@ input[type=text], input[type=password] {
 fieldset {
   width: 256px;
   padding: 50px;
-  background-color: white;
+  background-color: ;
   border: 2px groove;
 }
 
