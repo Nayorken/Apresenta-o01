@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-<meta charset="UTF-8">
-<link rel="shortcut icon" href="/static/favicon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="/static/style.css">
-{% block titulo %}
-{% endblock %}
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    {% block titulo %}
+    {% endblock %}
 
-<script type="text/javascript" src="/static/scroll.js"></script>
+    <script type="text/javascript" src="/static/scroll.js"></script>
 <body>
 
 {% set livro = loja.livro %}
@@ -21,18 +22,18 @@
 
 {% set icons = ['fas fa-question', 'fas fa-archive', 'fas fa-microchip', 'fas fa-desktop'] %}
 <div class="navbar">
-  <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
-  {% for nome in menu %}
-  <a href="/pr_ini/{{ nome.title }}"><i class="{{ icons.pop() }}"></i> {{ nome.title }}</a>
-  {% endfor %}
-  <a href="/carrinho_ini"><i class="fas fa-shopping-cart"></i> Carrinho</a>
-  {% if usr %}
-  <a href="/logout"><i class="fa fa-fw fa-user"></i> Logout</a>
-  <user><i class="fa fa-fw fa-user-tie"></i> {{ usr }}</user>
-  {% else %}
-  <a href="/login"><i class="fa fa-fw fa-lock"></i> Login</a>
-  <a href="/registo"><i class="fa fa-fw fa-user"></i> Registo</a>
-  {% endif %}
+    <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+    {% for nome in menu %}
+    <a href="/pr_ini/{{ nome.title }}"><i class="{{ icons.pop() }}"></i> {{ nome.title }}</a>
+    {% endfor %}
+    <a href="/carrinho_ini"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+    {% if usr %}
+    <a href="/logout"><i class="fa fa-fw fa-user"></i> Logout</a>
+    <user><i class="fa fa-fw fa-user-tie"></i> {{ usr }}</user>
+    {% else %}
+    <a href="/login"><i class="fa fa-fw fa-lock"></i> Login</a>
+    <a href="/registo"><i class="fa fa-fw fa-user"></i> Registo</a>
+    {% endif %}
 </div>
 {% block conteudo %}
 {% endblock %}
@@ -49,54 +50,55 @@
 <body background="/static/wallpaper/metal2.jpg">
 <div class="content">
 </div>
-    <footer id="myFooter">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h2 class="logo"><a href="#"> LOGO </a></h2>
+<footer id="myFooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="logo"><img src="/static/logos/logo.png" width="150"></h2>
+            </div>
+            <div class="col-sm-2">
+                <h5>Get started</h5>
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                    <li><a href="http://127.0.0.1:5000/registo">Sign up</a></li>
+                    <li><a href="http://foreigners.textovirtual.com/braline/224/46116/b_catalogo_maq.pdf">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>About us</h5>
+                <ul>
+                    <li><a href="#">Company Information</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help desk</a></li>
+                    <li><a href="#">Forums</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="social-networks">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
                 </div>
-                <div class="col-sm-2">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <div class="social-networks">
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                    <button type="button" class="btn btn-default">Contact us</button>
-                </div>
+                <button type="button" class="btn btn-default">Contact us</button>
             </div>
         </div>
-        <div class="footer-copyright">
-            <p>© Copyright 2019 Hugo Ferreira </p>
-        </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
+    <div class="footer-copyright">
+        <p>© Copyright 2019 Hugo Ferreira </p>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<br><center>
+<br>
+<center>
 </center>
 </body>
 </html>
