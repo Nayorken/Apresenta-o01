@@ -125,5 +125,10 @@ def logout():
 def info():
     return render_template('info.html', loja=loja)
 
+
+@app.route('/contactos')
+def contactos():
+    return render_template('contactos.html', loja=loja)
+
 if __name__ == '__main__':
     app.run(debug=True)
