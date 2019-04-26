@@ -22,7 +22,7 @@
 
 {% set icons = ['fas fa-question', 'fas fa-archive', 'fas fa-microchip', 'fas fa-desktop'] %}
 <div class="navbar">
-    <a class="active"><img src="/static/logos/logo.png" width="90"></a>
+    <a class="active" href="/"><img src="/static/logos/logo.png" width="90"></a>
     {% for nome in menu %}
     <a href="/pr_ini/{{ nome.title }}"><i class="{{ icons.pop() }}"></i> {{ nome.title }}</a>
     {% endfor %}
@@ -59,8 +59,8 @@
             <div class="col-sm-2">
                 <h5>Get started</h5>
                 <ul>
-                    <li><a href="http://127.0.0.1:5000/">Home</a></li>
-                    <li><a href="http://127.0.0.1:5000/registo">Sign up</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/registo">Sign up</a></li>
                     <li><a href="http://foreigners.textovirtual.com/braline/224/46116/b_catalogo_maq.pdf">Downloads</a></li>
                 </ul>
             </div>
