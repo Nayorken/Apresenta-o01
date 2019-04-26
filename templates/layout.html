@@ -22,7 +22,7 @@
 
 {% set icons = ['fas fa-question', 'fas fa-archive', 'fas fa-microchip', 'fas fa-desktop'] %}
 <div class="navbar">
-    <a class="active" href="/"><img src="/static/logos/logo.png" width="80"></a></img>
+    <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
     {% for nome in menu %}
     <a href="/pr_ini/{{ nome.title }}"><i class="{{ icons.pop() }}"></i> {{ nome.title }}</a>
     {% endfor %}
@@ -82,7 +82,7 @@
                 <div class="social-networks">
                     <a href="https://www.instagram.com" class="instagram"><i class="fa fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=100012551295946" class="facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="https://news.google.com/?tab=wn&hl=pt-PT&gl=PT&ceid=PT:pt-150" class="google"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://news.google.com/?tab=rn&hl=pt-PT&gl=PT&ceid=PT:pt-150" class="google"><i class="fa fa-google-plus"></i></a>
                 </div>
                 <button type="button" class="btn btn-default">Contact us</button>
             </div>
