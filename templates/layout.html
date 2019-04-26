@@ -22,7 +22,7 @@
 
 {% set icons = ['fas fa-question', 'fas fa-archive', 'fas fa-microchip', 'fas fa-desktop'] %}
 <div class="navbar">
-    <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a class="active" href="/"><img src="/static/logos/logo.png" width="80"></a></img>
     {% for nome in menu %}
     <a href="/pr_ini/{{ nome.title }}"><i class="{{ icons.pop() }}"></i> {{ nome.title }}</a>
     {% endfor %}
