@@ -4,21 +4,23 @@
 {% endblock %}
 
 {% block conteudo %}
+<body background="/static/wallpaper/fundo5.gif">
 <center>
-    <h1>Criar nova Conta</h1>
+
     <form method="post">
         <fieldset>
-            <legend>Introduza os seus dados</legend>
-            <h4>Utilizador</h4>
-            <input type="text" name="utilizador" required>
+            <BR>
+            <legend style="color:#f46664">Introduza os seus dados</legend>
+            <h4 style="color:#ffffff">Utilizador</h4>
+            <input type="text"  name="utilizador" required>
             <p><br></p>
-            <h4>Endereço de Email</h4>
+            <h4 style="color:#ffffff">Endereço de Email</h4>
             <input type="text" name="email" required>
             <p><br></p>
-            <h4>Palavra-Passe</h4>
+            <h4 style="color:#ffffff">Palavra-Passe</h4>
             <input type="password" name="passe" required>
             <p><br></p>
-            <h4>Confirme a Passe</h4>
+            <h4 style="color:#ffffff">Confirme a Passe</h4>
             <input type="password" name="cpasse" required>
             <p><br></p>
             <input type="submit" value="Submeter">
