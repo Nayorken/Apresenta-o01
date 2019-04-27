@@ -4,9 +4,10 @@
 {% endblock %}
 
 {% block conteudo %}
+<body background="/static/wallpaper/fundo6.jpg">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
@@ -38,31 +39,33 @@ input[type=submit]:hover {
   border-radius: 5px;
   padding: 20px;
 }
-</style>
+
+    </style>
 </head>
 <body>
-
+<center>
+    <img src="/static/Contacto/conta2.gif" width="300">
+    <br>
+</center>
 <div class="container">
-  <form method="post" action="mailto:destinatario@exemplosouohugo.com">
-    <center>
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    </center>
-    <center>
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    </center>
-    <center>
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-    </center>
-    <input type="submit" value="Submit">
-  </form>
+    <form method="post" action="mailto:destinatario@exemplosouohugo.com">
+        <center>
+            <label for="fname">Primeiro Nome</label>
+            <input type="text" id="fname" name="firstname" placeholder="Seu nome..">
+        </center>
+        <center>
+            <label for="lname">Ultimo Nome</label>
+            <input type="text" id="lname" name="lastname" placeholder="Seu ultimo nome..">
+        </center>
+        <center>
+            <label for="subject">Mensagem</label>
+            <textarea id="subject" name="subject" placeholder="Escreva algo.." style="height:200px"></textarea>
+        </center>
+        <input type="submit" value="Submit">
+    </form>
 </div>
 
 </body>
-<center>
-<img src="/static/contactos/conta.png" height="150" width="1500">
-</center>
+
 
 {% endblock %}
