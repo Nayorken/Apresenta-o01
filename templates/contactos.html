@@ -40,7 +40,12 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+.auto-style1 {
+	background-color: white;
     </style>
+
+
+
 </head>
 <body>
 <center>
@@ -50,15 +55,15 @@ input[type=submit]:hover {
 <div class="container">
     <form method="post" action="mailto:destinatario@exemplosouohugo.com">
         <center>
-            <label for="fname">Primeiro Nome</label>
+            <label for="fname" class="auto-style1">Primeiro Nome</label>
             <input type="text" id="fname" name="firstname" placeholder="Seu nome..">
         </center>
         <center>
-            <label for="lname">Ultimo Nome</label>
+            <label for="lname" class="auto-style1">Ultimo Nome</label>
             <input type="text" id="lname" name="lastname" placeholder="Seu ultimo nome..">
         </center>
         <center>
-            <label for="subject">Mensagem</label>
+            <label for="subject" class="auto-style1">Mensagem</label>
             <textarea id="subject" name="subject" placeholder="Escreva algo.." style="height:200px"></textarea>
         </center>
         <input type="submit" value="Submit">
