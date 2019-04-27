@@ -4,10 +4,13 @@
 {% endblock %}
 
 {% block conteudo %}
+<body background="/static/wallpaper/hd.gif">
 <center>
-    <h1>Lista de Compras</h1>
+    <center
+    <h1><img src="/static/wallpaper/che.png" height="200"></h1>
+</center>
     {% if carrinho.__len__() == 0 %}
-    <h3>O seu carrinho de compras está vazio.</h3>
+    <h3 style="color:#ffffff;">O seu carrinho de compras está vazio.</h3>
     <img src="/static/images/carrinho.png">
     {% else %}
     <!-- O número máximo de items por linha é ... ? -->
@@ -36,10 +39,20 @@
                 </form>
             </td>
             <!-- Se a linha já tiver o número máximo de items permitido, mudar... -->
-            {% if (linha - min) % items == items - 1 %}</tr><tr>{% endif %}
+            {% if (linha - min) % items == items - 1 %}
+        </tr>
+        <tr>{% endif %}
             {% endfor %}
         </tr>
     </table>
+    <style type="text/css">
+.auto-style1 {
+	background-color: #e5e5e5;
+}
+
+
+    </style>
+
     <br><br>
     <div class="pagbar">
         {% set total_items = carrinho.__len__() %}
@@ -62,12 +75,12 @@
     {% if usr and loja.encomendar %}
     <form method="post">
         <fieldset>
-            <legend>Dados de faturação</legend>
-            <label>Número de identificação fiscal</label>
+            <legend style="color:#ffffff;">Dados de faturação</legend>
+            <label style="color:#ffffff;">Número de identificação fiscal</label>
             <input type="text" name="nif" value="{{ loja.usr.nif }}" required>
-            <p></p><label>Nome completo</label>
-            <input type="text" name="nome" value="{{ loja.usr.nome }} "required>
-            <p></p><label>Morada de envio</label>
+            <p></p><label style="color:#ffffff;">Nome completo</label>
+            <input type="text" name="nome" value="{{ loja.usr.nome }} " required>
+            <p></p><label style="color:#ffffff;">Morada de envio</label>
             <textarea rows="4" cols="34" name="morada" required>{{ loja.usr.morada }}</textarea>
             <p><br></p><input type='submit' value='Finalizar a Encomenda'>
         </fieldset>
@@ -77,7 +90,7 @@
         <input type='submit' value='Encomendar'>
     </form>
     {% else %}
-    <h3>Inicie a sessão para efetuar a encomenda.</h3>
+    <h3 class="auto-style1">Inicie a sessão para efetuar a encomenda.</h3>
     {% endif %} <!-- Se houver sessão iniciada -->
     {% endif %} <!-- Se o carrinho não estiver vazio -->
 </center>
